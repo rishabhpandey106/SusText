@@ -1,6 +1,7 @@
 "use client"
 import Decryption from '@/Components/Decryption'
 import Encryption from '@/Components/Encryption'
+import Footer from '@/Components/Footer'
 import Header from '@/Components/Header'
 import Result from '@/Components/Result'
 import Toggle from '@/Components/Toggle'
@@ -33,6 +34,7 @@ const page = () => {
         isEncrypting ? (<Result result={encryptedResult}/>) : (<Result result={decryptedResult} />)
       }
     </div>
+    <Footer/>
     </>
   )
 }
