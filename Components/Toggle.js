@@ -14,8 +14,10 @@ const Toggle = ({ setisEncrypting, isEncrypting }) => {
   return (
     <>
     <div id="endec-div">
-            <h3 id="enc-btn" className={isEncrypting?"active":""} onClick={handleEncrypt}><span><img src="khulatala.png" alt=""/></span> Encrypt Text</h3>
-            <h3 id="dec-btn" className={isEncrypting?"":"active"} onClick={handleDecrypt}><span><img src="tala.png" alt=""/></span> Decrypt Emojis</h3>
+            <h3 id="enc-btn" className={isEncrypting?"active":""} onClick={()=>{handleEncrypt();
+              document.querySelector(".arrow").style.rotate="90deg"}}><span><img src="khulatala.png" alt=""/></span> Encrypt Text</h3>
+            <h3 id="dec-btn" className={isEncrypting?"":"active"} onClick={()=>{handleDecrypt();
+              document.querySelector(".arrow").style.rotate="-90deg"}}><span><img src="tala.png" alt=""/></span> Decrypt Emojis</h3>
         </div>
     </>
   )

@@ -9,8 +9,8 @@ import React, { useState } from 'react'
 const page = () => {
   const [isEncrypting, setisEncrypting] = useState(true);
   const [encryptedResult, setencryptedResult] = useState('');
-  const [decryptedResult, setdecryptedResult] = useState(null);
-
+  const [decryptedResult, setdecryptedResult] = useState('');
+  // const [arrow, setarrow] = useState(false);
   const handleEncryption =(result) => {
     console.log("page",result);
     setencryptedResult(result);
@@ -24,7 +24,7 @@ const page = () => {
   return (
     <>
     <div id="main">
-      <Header/>
+      <Header isToggled={isEncrypting} />
       <Toggle isEncrypting={isEncrypting} setisEncrypting={setisEncrypting} />
       {
         isEncrypting ? (<Encryption onEncrypt={handleEncryption}/>) : (<Decryption onDecrypt={handleDecryption}/>)

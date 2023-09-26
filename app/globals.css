@@ -200,3 +200,7 @@ button img{
   display: none;
   margin-top: 40px;
 }
+
+#copy:hover{
+  transform: scale(1.1);
+}
